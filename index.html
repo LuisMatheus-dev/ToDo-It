@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/2000/svg"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo'It - Gerenciamento de Tarefas</title>
+  <link rel="stylesheet" type="text/css" href="./src/css/index.css">
+  
+  <!-- Resources-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=KoHo:wght@400;700&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+  <main>
+    <section class="container">
+      
+          <!-- Topo (Perfil e Data) -->
+          <header class="header">
+            <img class="header__profile-avatar" src="#">
+            <div class="info">
+              <img class="info__icone_calendario icone icone-grande" src="src/icons/calendario.svg">
+              <div class="info__data">
+                <h1 class="info__data-label">Dia <span class="info__dia--destaque">27</span> de <span class="info__mes--destaque">Junho</span></h1>
+                <h3 class="info__tarefas-pendentes"><span class="info__numero-tarefas">10</span><span class="info__tarefas-pendentes-label--destaque"> Tarefas Pendentes</span></h3>
+              </div>
+            </div>
+          </header>
+
+          <!-- Tarefas -->
+          <div class="tarefas">
+            <ul class="tarefas__lista">
+              <li class="tarefas__item tarefa__item--pendente">
+                <input type="checkbox"><label for="">Limpar o Quarto</label>
+              </li>
+              <li class="tarefas__item tarefas__item--pendente">
+                <input type="checkbox"><label for="">Criar um post</label>
+              </li>
+              <li class="tarefas__item tarefas__item--pendente">
+                <input type="checkbox"><label for=""> bilhete adcinema</label>
+              </li>
+            </ul>
+
+            <button class="tarefas__adicionar-tarefa btn btn--redondo">
+              <img class="icone icone-plus icone--grande" src="./src/icons/adicionar.svg">
+            </button>
+          </div>
+        
+        <!-- Adicionar nova tarega-->
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "ToDo-it",
+  "version": "1.0.0",
+  "description": "APP e API para criação de tarefas",
+  "main": "index.js",
+  "author": "Luis Matheus <LuisMatheus-dev>",
+  "license": "MIT"
+}
