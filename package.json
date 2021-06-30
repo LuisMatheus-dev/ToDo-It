@@ -7,5 +7,8 @@
     "start": "lite-server"
   },
   "author": "Luis Matheus <LuisMatheus-dev>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
