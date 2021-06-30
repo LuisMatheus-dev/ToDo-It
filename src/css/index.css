@@ -184,5 +184,41 @@ input[type=checkbox] {
     top: 7px;
     left: 13px;
 }
+input[type=checkbox] + label svg {
+  stroke-width: 1;
+  fill: transparent;
+}
+
+input[type=checkbox] + label svg .box {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+input[type=checkbox] + label svg .check {
+  stroke-width: 1;
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+input[type=checkbox]:checked + label .box {
+  stroke-dashoffset: 300;
+}
+input[type=checkbox]:checked + label .check {
+  stroke-dashoffset: 0;
+}
+
+input[type=checkbox]:checked + label .check {
+  stroke-dashoffset: 0;
+}
+
+input[type=checkbox]:checked  > .item--1{
+  background-color: #9C3D54;
+  color: red;
+}
+
+
+
 
 

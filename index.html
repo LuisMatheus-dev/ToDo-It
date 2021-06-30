@@ -25,16 +25,13 @@
 </svg> -->
 
 
-
+<!-- 
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.st1{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
   <symbol id="checkbox" viewBox="0 0 18.8 15.8">
     <path class="st0" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
-    <polyline class="st1" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
+    <polyline class="check" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
     </symbol>
-</svg>
-
-
-
+</svg> -->
 
 <body>
   <main>
@@ -55,16 +52,22 @@
           <!-- Tarefas -->
           <div class="tarefas">
             <ul class="tarefas__lista">
-              <li class="tarefas__item tarefa__item--pendente">
+              <li class="tarefas__item item--1 tarefa__item--pendente">
                 <input type="checkbox" name="cb">
                   <label class="tarefas__item__checkbox" for="cb">
-                  
-                    <svg class="custom-checkbox"><use xlink:href="#checkbox" /></svg>      
+
+                    <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
+                        <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
+                        <polyline class="check" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
+
+                    </svg> 
+ 
                   Limpar o Quarto
                   </label>
                 </input>
               </li>
             </ul>
+            <h1>ALOOO</h1>
 
             <button class="tarefas__adicionar-tarefa btn btn--redondo">
               <img class="icone icone-plus icone--grande" src="./src/icons/adicionar.svg">
