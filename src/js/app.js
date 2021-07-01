@@ -6,10 +6,9 @@ tasks.addEventListener('click', (event) => {
     const checkbox = document.querySelector(`#tarefa-${taskId}`)
 
     /**
-     * Quando o click ocorre no checkbox, o estado muda depois que 
-     * o javascript lê a propriedade checked, antes que o evento seja lançado,
-     * com a exeção do checkbox (!== checkbox)
-     * delegando a função de marcar para o proprio checkbox 
+     * Quando o evento click ocorre no checkbox, o DOM retornara o estado
+     * do checkbox antes que o arvore seja atualizada com o atributo checked
+     * resultando em nenhuma mudança no checkbox
      */
     console.log(checkbox.checked)
     if(checkbox && ( event.target !== checkbox )) {

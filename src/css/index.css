@@ -181,6 +181,21 @@ h3 {
 }
 
 
+label::before {
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: var(--bg);
+  position: absolute;
+  
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  transition: width 0.5s ease-in-out;
+
+}
+
+
 .custom-checkbox {
   width: 36px;
   height: 36px;
@@ -226,7 +241,9 @@ input[type=checkbox]:checked + label .check {
   stroke-dashoffset: 0;
 }
 
-
+input[type=checkbox]:checked ~ label::before {
+  width: 130px;
+}
 
 
 
