@@ -181,9 +181,9 @@ h3 {
 }
 
 
-label::before {
+.tarefas__item::before {
   content: "";
-  width: 0px;
+  width: 50%;
   height: 2px;
   background-color: var(--bg);
   position: absolute;
