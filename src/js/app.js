@@ -1,12 +1,11 @@
 const tasks = document.querySelector('.tarefas__lista');
 
-const riscado = document.querySelector('.vl');
-
 tasks.addEventListener('click', (event) => {
   
   const task = event.target.closest('.tarefas__item');
   const taskId = task.dataset.tarefa;
   const checkbox = document.querySelector(`#tarefa-${taskId}`);
+  const riscado = document.querySelector(`.riscado--tarefa-${taskId}`);
   const taskTitle = task.textContent.trim().split('\n')[4].trim().replace(/ /g,'').length
   const pxPorCaractere = taskTitle * 9;
   /**

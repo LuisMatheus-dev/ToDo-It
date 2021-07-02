@@ -7,6 +7,7 @@
   <title>ToDo'It - Gerenciamento de Tarefas</title>
   <link rel="stylesheet" type="text/css" href="./src/css/index.css">
   
+  
   <!-- Resources-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,24 +15,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=KoHo:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://unpkg.com/minibarjs@latest/dist/minibar.min.css" rel="stylesheet" type="text/css">
+
+  <!-- <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/> -->
 
 </head>
-<!-- Checkbox Customizado -->
- <!-- <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}.st1{fill:none;stroke:#EEB76B;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="0.3168" x2="7.9182" y2="15.6533"><stop  offset="0" style="stop-color:#EEB76B"/><stop  offset="1" style="stop-color:#E2703A"/></linearGradient>
-  <symbol id="checkbox" viewBox="0 0 18.8 15.8">
-    <path class="st0" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2	C14.8,13.4,13.3,14.9,11.5,14.9z"/>
-    <polyline class="st1" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
-  </symbol>
-</svg> -->
-
-
-<!-- 
-<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.st1{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
-  <symbol id="checkbox" viewBox="0 0 18.8 15.8">
-    <path class="st0" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
-    <polyline class="check" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
-    </symbol>
-</svg> -->
 
 <body>
   <main>
@@ -50,10 +38,11 @@
           </header>
 
           <!-- Tarefas -->
-          <div class="tarefas">
-            <ul class="tarefas__lista">
+          <div class="tarefas" >
+            <!-- data-simplebar data-simplebar-auto-hide="false" -->
+            <ul class="tarefas__lista" id="lista"> 
               <li class="tarefas__item tarefa__item--pendente" data-tarefa="1">
-                  <div class="vl"></div>
+                <span class="riscado riscado--tarefa-1"></span>
                 <input type="checkbox" class="cb" id="tarefa-1" name="tarefa--1">
 
                   <label class="tarefas__item__checkbox" for="tarefa--1">
@@ -68,7 +57,7 @@
               </li>
 
               <li class="tarefas__item tarefa__item--pendente" data-tarefa="2">
-                <div class="vl"></div>
+                <span class="riscado riscado--tarefa-2"></span>
                 <input type="checkbox" class="cb" id="tarefa-2" name="tarefa--2">
                   <label class="tarefas__item__checkbox" for="tarefa--2">
                     
@@ -81,9 +70,9 @@
                 </input>
               </li>
 
-              <li class="tarefas__item tarefa--3 tarefa__item--pendente">
-                <div class="vl"></div>
-                <input type="checkbox"  class="cb" name="tarefa--3">
+              <li class="tarefas__item tarefa--3 tarefa__item--pendente" data-tarefa="3">
+                <span class="riscado riscado--tarefa-3"></span>
+                <input type="checkbox"  class="cb" id="tarefa-3" name="tarefa--3">
                   <label class="tarefas__item__checkbox" for="tarefa--3">
 
                     <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
@@ -96,9 +85,10 @@
               </li>
 
               
-              <li class="tarefas__item tarefa--4 tarefa__item--pendente">
-                <input type="checkbox" name="tarefa--3">
-                  <label class="tarefas__item__checkbox" for="tarefa--3">
+              <li class="tarefas__item tarefa--4 tarefa__item--pendente" data-tarefa="4">
+                <span class="riscado riscado--tarefa-4"></span>
+                <input type="checkbox"  class="cb" id="tarefa-4" name="tarefa--4">
+                  <label class="tarefas__item__checkbox" for="tarefa--4">
 
                     <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
                         <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
@@ -110,9 +100,10 @@
               </li>
 
               
-              <li class="tarefas__item tarefa--5 tarefa__item--pendente">
-                <input type="checkbox" name="tarefa--3">
-                  <label class="tarefas__item__checkbox" for="tarefa--3">
+              <li class="tarefas__item tarefa--5 tarefa__item--pendente" data-tarefa="5">
+                <span class="riscado riscado--tarefa-5"></span>
+                <input type="checkbox" class="cb" id="tarefa-5" name="tarefa--5">
+                  <label class="tarefas__item__checkbox" for="tarefa--5">
 
                     <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
                         <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
@@ -124,9 +115,10 @@
               </li>
 
               
-              <li class="tarefas__item tarefa--6 tarefa__item--pendente">
-                <input type="checkbox" name="tarefa--3">
-                  <label class="tarefas__item__checkbox" for="tarefa--3">
+              <li class="tarefas__item tarefa--6 tarefa__item--pendente" data-tarefa="6">
+                <span class="riscado riscado--tarefa-6"></span>
+                <input type="checkbox"  class="cb" id="tarefa-6" name="tarefa--6">
+                  <label class="tarefas__item__checkbox" for="tarefa--6">
 
                     <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
                         <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
@@ -138,9 +130,10 @@
               </li>
 
                   
-              <li class="tarefas__item tarefa--1 tarefa__item--pendente">
-                <input type="checkbox" name="tarefa--3">
-                  <label class="tarefas__item__checkbox" for="tarefa--3">
+              <li class="tarefas__item tarefa--7 tarefa__item--pendente" data-tarefa="7">
+                <span class="riscado riscado--tarefa-7"></span>
+                <input type="checkbox" class="cb" id="tarefa-7" name="tarefa--7">
+                  <label class="tarefas__item__checkbox" for="tarefa--7">
 
                     <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
                         <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
@@ -153,9 +146,10 @@
 
 
               
-              <li class="tarefas__item tarefa--1 tarefa__item--pendente">
-                <input type="checkbox" name="tarefa--3">
-                  <label class="tarefas__item__checkbox" for="tarefa--3">
+              <li class="tarefas__item tarefa--8 tarefa__item--pendente" data-tarefa="8">
+                <span class="riscado riscado--tarefa-8"></span>
+                <input type="checkbox" class="cb" id="tarefa-8" name="tarefa--8">
+                  <label class="tarefas__item__checkbox" for="tarefa--8">
 
                     <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
                         <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
@@ -165,9 +159,9 @@
                   </label>
                 </input>
               </li>
-
+        
             </ul>
-
+ 
             <button class="tarefas__adicionar-tarefa btn btn--redondo">
               <img class="icone icone-plus icone--grande" src="./src/icons/adicionar.svg">
             </button>
@@ -177,5 +171,13 @@
     </section>
   </main>
   <script src="./src/js/app.js" defer></script>
+  <script src="./src/js/teste.js"></script>
+
+  <script>
+    var Scrollbar = window.Scrollbar;
+
+    Scrollbar.init(document.querySelector('#lista'));
+  </script>
+  <!-- <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script> -->
 </body>
 </html>

@@ -9,6 +9,10 @@
   "author": "Luis Matheus <LuisMatheus-dev>",
   "license": "MIT",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "smooth-scrollbar": "^8.6.2"
+  },
+  "dependencies": {
+    "simplebar": "^5.3.4"
   }
 }

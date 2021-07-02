@@ -45,7 +45,7 @@ h3 {
 
 h3 {
   color: var(--bg);
-  font-size: 2rem
+  font-size: 2rem;
 }
 
 .btn {
@@ -178,24 +178,11 @@ h3 {
   display: flex;
   position: relative;
   padding: 2px 0 0 10px;
+  font-size: 1.5rem;
 }
 
 
-.tarefas__item::before {
-  content: "";
-  width: 50%;
-  height: 2px;
-  background-color: var(--bg);
-  position: absolute;
-  
-  top: 50%;
-  left: 15%;
-  transform: translateY(-50%);
-  transition: width 0.5s ease-in-out;
-
-}
-
-.vl {
+.riscado {
   width: 0px;
   height: 2px;
   background-color: var(--bg);
@@ -258,3 +245,6 @@ input[type=checkbox] {
   left: 13px;
 }
 
+.scrollbar-thumb {
+  background-color: var(--light-text);
+}
