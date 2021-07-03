@@ -51,6 +51,7 @@ h3 {
 .btn {
   text-decoration: none;
   cursor: pointer;
+  z-index: 3;
 }
 
 .icone-grande {
@@ -100,6 +101,18 @@ h3 {
 
 }
 
+.header__profile-avatar {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--light-text);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+  
+}
+
 .info {
   margin: 10px;
   display: flex;
@@ -129,6 +142,7 @@ h3 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 }
 
 .tarefas__lista {
@@ -138,7 +152,7 @@ h3 {
   height: 409px;
   width: 350px;
   overflow-y: scroll;
-  padding-bottom: 50px;
+  
 }
 
 .tarefas__lista > li, label {
@@ -154,7 +168,7 @@ h3 {
 }
 
 .info__numero-tarefas {
-  color: #9C3D54;
+  color:var(--text);
   background-color: var(--bg);
   display: inline-block;
   padding: 1px 4px;
@@ -179,13 +193,30 @@ h3 {
   position: relative;
   padding: 2px 0 0 10px;
   font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+
+}
+
+.tarefas__item:hover {
+  transform: scale(1.05)
+}
+
+.concluido {
+  box-shadow: inset 5px 5px 10px hsla(0, 0%, 0%, 0.2),
+            inset -5px -5px 10px hsla(0, 0%, 0%, 0.07);
+}
+
+.concluido:hover {
+  filter: brightness(1.08);
+  transform: scale(1);
 }
 
 
 .riscado {
   width: 0px;
   height: 2px;
-  background-color: var(--bg);
+  background-color: var(--light-text);
   position: absolute;
   top: 50%;
   left: 15%;
@@ -205,6 +236,7 @@ h3 {
 input[type=checkbox] + label svg {
   stroke-width: 1;
   fill: transparent;
+  
 }
 
 input[type=checkbox] + label svg .box {
@@ -227,7 +259,15 @@ input[type=checkbox]:checked + label .box {
 
 input[type=checkbox]:checked + label .check {
   stroke-dashoffset: 0;
+  stroke: var(--light-text);
 }
+
+input[type=checkbox]:checked + label {
+  color: var(--light-text);
+}
+
+
+
 /* 
 input[type=checkbox]:checked ~ label::before {
   width: 130px;
@@ -246,5 +286,28 @@ input[type=checkbox] {
 }
 
 .scrollbar-thumb {
-  background-color: var(--light-text);
+  background-color: #c9c9c9;
+  width: 100px;
+}
+
+.scroll-content li:last-child {
+  margin-bottom: 50px;
+}
+
+.sombra {
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0px 20px 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgb(255, 230, 197) 43%);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+
+.sombra-expandir {
+  height: 150px;
+  opacity: 0.9;
 }

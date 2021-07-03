@@ -27,7 +27,7 @@
       
           <!-- Topo (Perfil e Data) -->
           <header class="header">
-            <img class="header__profile-avatar" src="#">
+            <img class="header__profile-avatar" src="https://ui-avatars.com/api/?background=EEB76B&color=9C3D54&size=128">
             <div class="info">
               <img class="info__icone_calendario icone icone-grande" src="src/icons/calendario.svg">
               <div class="info__data">
@@ -39,6 +39,7 @@
 
           <!-- Tarefas -->
           <div class="tarefas" >
+            <div class="sombra"></div>
             <!-- data-simplebar data-simplebar-auto-hide="false" -->
             <ul class="tarefas__lista" id="lista"> 
               <li class="tarefas__item tarefa__item--pendente" data-tarefa="1">
@@ -171,13 +172,12 @@
     </section>
   </main>
   <script src="./src/js/app.js" defer></script>
-  <script src="./src/js/teste.js"></script>
+  <script src="./src/js/scrollbar.js"></script>
 
   <script>
-    var Scrollbar = window.Scrollbar;
+    const Scrollbar = window.Scrollbar;
 
     Scrollbar.init(document.querySelector('#lista'));
   </script>
-  <!-- <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script> -->
 </body>
 </html>
