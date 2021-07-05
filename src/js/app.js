@@ -1,6 +1,7 @@
 const tasks = document.querySelector('.tarefas__lista');
+const tasksList = document.querySelectorAll('.tarefas__item')
 const sombra = document.querySelector('.sombra');
-
+const options = document.querySelectorAll('.tarefas__item__opcoes');
 
 tasks.addEventListener('click', (event) => {
   
@@ -40,7 +41,8 @@ tasks.addEventListener('click', (event) => {
 
 });
 
-let scrollOn = false
+let scrollOn = false;
+
 tasks.addEventListener('wheel', () => { 
   /**
    * Garante que o efeito seja chamado uma vez 
@@ -58,4 +60,54 @@ tasks.addEventListener('wheel', () => {
   }
 });  
 
+let animado = false;
 
+options.forEach(option => { 
+  option.addEventListener('mouseenter', event => {
+    const botaoExpansivel = event.target.childNodes[1];
+    const opcoesContainer = event.target.childNodes[3];
+
+    if(!animado) {
+      setTimeout(() => {
+        
+        botaoExpansivel.classList.add('btn--expansivel-expandir')
+
+        if(opcoesContainer) {
+          opcoesContainer.classList.add('opcoes--expandir')
+        }
+        animado = false;
+      }),130}
+
+      animado = true;
+  })  
+
+  option.addEventListener('mouseleave', event => {
+    const botaoExpansivel = event.target.childNodes[1];
+    const opcoesContainer = event.target.childNodes[3];
+
+    if(!animado) {
+      setTimeout(() => {
+        
+        botaoExpansivel.classList.toggle('btn--expansivel-expandir')
+
+        if(opcoesContainer) {
+          opcoesContainer.classList.toggle('opcoes--expandir')
+        }
+        animado = false;
+      }),200}
+
+      animado = true;
+  })  
+
+})
+
+tasksList.forEach(task => {
+  task.addEventListener('mouseenter',event => {
+    const botaoExpansivel = event.target.children[3].childNodes[1];
+    const opcoesContainer = event.target.children[3].childNodes[3];
+
+ 
+      console.log(botaoExpansivel.classList.contains('btn--expansivel-expandir'))
+    
+  })
+})
