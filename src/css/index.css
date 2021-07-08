@@ -109,6 +109,15 @@ h3 {
   animation: expandir 0.7s;
 }
 
+.arrow-icon  {
+  transition: transform 0.3s ease-out;
+}
+.btn--expansivel-expandir img {
+  transform: rotate(180deg);
+}
+
+
+
 /* 
 .tarefas__item__opcoes:hover .btn--expansivel {
   padding-right: 70px;

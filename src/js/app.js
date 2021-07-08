@@ -64,19 +64,18 @@ let animado = false;
 
 options.forEach(option => { 
   option.addEventListener('mouseenter', event => {
+    even
     const botaoExpansivel = event.target.childNodes[1];
     const opcoesContainer = event.target.childNodes[3];
 
     if(!animado) {
       setTimeout(() => {
         
-        botaoExpansivel.classList.add('btn--expansivel-expandir')
+        botaoExpansivel.classList.add('btn--expansivel-expandir');
+        opcoesContainer.classList.add('opcoes--expandir');
 
-        if(opcoesContainer) {
-          opcoesContainer.classList.add('opcoes--expandir')
-        }
         animado = false;
-      }),130}
+      }),230}
 
       animado = true;
   })  
@@ -88,26 +87,13 @@ options.forEach(option => {
     if(!animado) {
       setTimeout(() => {
         
-        botaoExpansivel.classList.toggle('btn--expansivel-expandir')
+        botaoExpansivel.classList.remove('btn--expansivel-expandir');
+        opcoesContainer.classList.remove('opcoes--expandir');
 
-        if(opcoesContainer) {
-          opcoesContainer.classList.toggle('opcoes--expandir')
-        }
         animado = false;
       }),200}
 
       animado = true;
   })  
 
-})
-
-tasksList.forEach(task => {
-  task.addEventListener('mouseenter',event => {
-    const botaoExpansivel = event.target.children[3].childNodes[1];
-    const opcoesContainer = event.target.children[3].childNodes[3];
-
- 
-      console.log(botaoExpansivel.classList.contains('btn--expansivel-expandir'))
-    
-  })
 })
