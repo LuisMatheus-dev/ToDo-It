@@ -64,7 +64,7 @@ let animado = false;
 
 options.forEach(option => { 
   option.addEventListener('mouseenter', event => {
-    even
+  
     const botaoExpansivel = event.target.childNodes[1];
     const opcoesContainer = event.target.childNodes[3];
 
