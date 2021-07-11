@@ -1,14 +1,12 @@
 const tasks = document.querySelector('.tarefas__lista');
-const tasksList = document.querySelectorAll('.tarefas__item')
 const sombra = document.querySelector('.sombra');
 const options = document.querySelectorAll('.tarefas__item__opcoes');
 
 tasks.addEventListener('click', (event) => {
   
-  const task = event.target.closest('.tarefas__item');
+  const task = event.target.closest('.tarefas__item__conteudo');
 
   if(task !== null) {
-
     const taskTitle = task.textContent.trim().split('\n')[4].trim().replace(/ /g,'').length
     const taskId = task.dataset.tarefa;
     const checkbox = document.querySelector(`#tarefa-${taskId}`);
@@ -25,6 +23,7 @@ tasks.addEventListener('click', (event) => {
       task.classList.toggle('concluido')
       riscado.style.width = checkbox.checked ? `${pxPorCaractere}px` : 0;
     }
+
 
     if(event.target !== checkbox) {
       
@@ -62,8 +61,29 @@ tasks.addEventListener('wheel', () => {
 
 let animado = false;
 
+const toggleOption = (hide=false) => {
+  return (event) => {
+    const botaoExpansivel = event.target.childNodes[1];
+    const opcoesContainer = event.target.childNodes[3];
+
+    if(!animado) {
+      setTimeout(() => {
+        const expandir  = hide ? 'remove' : 'add';
+        botaoExpansivel.classList[expandir]('btn--expansivel-expandir');
+        opcoesContainer.classList[expandir]('opcoes--expandir');
+
+        animado = false;
+      }),230};
+
+      animado = true;
+  }
+}
+
 options.forEach(option => { 
-  option.addEventListener('mouseenter', event => {
+    option.addEventListener('mouseenter', toggleOption());
+    option.addEventListener('mouseleave', toggleOption(true));
+  
+   /*option.addEventListener('mouseenter', event => {
   
     const botaoExpansivel = event.target.childNodes[1];
     const opcoesContainer = event.target.childNodes[3];
@@ -94,6 +114,5 @@ options.forEach(option => {
       }),200}
 
       animado = true;
-  })  
-
-})
+  });*/
+});
