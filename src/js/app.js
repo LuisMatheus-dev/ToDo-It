@@ -2,6 +2,8 @@ const tasks = document.querySelector('.tarefas__lista');
 const sombra = document.querySelector('.sombra');
 const options = document.querySelectorAll('.tarefas__item__opcoes');
 
+document.querySelector('form').addEventListener('click', (e) => e.preventDefault())
+
 tasks.addEventListener('click', (event) => {
   
   const task = event.target.closest('.tarefas__item__conteudo');

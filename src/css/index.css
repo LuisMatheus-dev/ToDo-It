@@ -4,6 +4,7 @@
   --text: #9C3D54;
   --light-text: #FFE6C5;
   --destaque: #E2703A;
+  --cinza: #cacaca;
 
   /* Status */
   --atencao: #E2953A;
@@ -469,3 +470,62 @@ input[type=checkbox] {
   height: 160px;
   opacity: 1;
 }
+
+.tarefas__adicionar-tarefa  {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tarefas-form {
+  margin: 8px 15px;
+  padding: 8px;
+}
+
+
+.tarefas-form input {
+  border-radius: 10px;
+  border: 2px solid #ebeaea ;
+  height: 35px;
+  width: 100%;
+ 
+}
+
+.tarefas-form  .tarefas-form__comeca_inpt, .tarefas-form .tarefas-form__termina_inpt {
+  width: 100px;
+}
+
+.tarefas-form label {
+  font-size: 1.5rem;
+}
+
+.campo {
+  margin: 20px 0px;
+}
+
+.tarefas-form__campo-data-limite {
+  
+}
+
+.caminho {
+  display: flex;
+  color:var(--cinza);
+  font-weight: 500;
+}
+
+.caminho > li {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.caminho > li:not(.caminho__pagina--principal)::after {
+  content: url(../icons/flecha-divisora.svg);
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.caminho__pagina--principal {
+  color: #E2703A;
+}
+

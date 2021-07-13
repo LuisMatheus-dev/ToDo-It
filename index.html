@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=KoHo:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=KoHo:wght@400;700&display=swap" rel="stylesheet"> 
   <link href="https://unpkg.com/minibarjs@latest/dist/minibar.min.css" rel="stylesheet" type="text/css">
 
   <!-- <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/> -->
@@ -37,10 +37,10 @@
             </div>
           </header>
 
-          <!-- Tarefas -->
+          <!-- Tarefas 
           <div class="tarefas" >
             <div class="sombra"></div>
-            <!-- data-simplebar data-simplebar-auto-hide="false" -->
+           
             <ul class="tarefas__lista" id="lista">        
               <li class="tarefas__item tarefa__item--pendente">
                 
@@ -48,11 +48,9 @@
                   <img class="icon icone--pequeno" src="src/icons/descricao.svg">
                 </button>
 
-
-
                 <div class="tarefas__item__conteudo" data-tarefa="1">
                   <span class="riscado riscado--tarefa-1"></span>
-                  <!-- Checkbox -->
+              
                   <input type="checkbox" class="cb" id="tarefa-1" name="tarefa--1">
                   <label class="tarefas__item__checkbox" for="tarefa--1">    
                     <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
@@ -64,7 +62,7 @@
                   <div class="tarefas__item__dias-restantes">
                     <span class="dias-restantes">10 Dias</span>
                   </div>
-                  <!-- Opções (Editar, excluir) -->
+                 
                   <div class="tarefas__item__opcoes">
                     <button class="btn--expansivel btn btn--rendondo btn--redondo-pequeno">
                       <img class="arrow-icon icone--pequeno" src="./src/icons/flecha-esquerda.svg">
@@ -84,181 +82,64 @@
                   <p>2h, depois de codar por 13h seguidas até overwork</p>
                 </div>
               </li>
-
-              <li class="tarefas__item tarefa__item--pendente">
-                
-                <button class="item__btn-descricao btn btn--inline">
-                  <img class="icon icone--pequeno" src="src/icons/descricao.svg">
-                </button>
-
-
-
-                <div class="tarefas__item__conteudo" data-tarefa="2">
-                  <span class="riscado riscado--tarefa-2"></span>
-                  <!-- Checkbox -->
-                  <input type="checkbox" class="cb" id="tarefa-2" name="tarefa--2">
-                  <label class="tarefas__item__checkbox" for="tarefa--2">    
-                    <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
-                        <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
-                        <polyline class="check" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
-                    </svg> 
-                    Limpar
-                  </label>
-                  <div class="tarefas__item__dias-restantes">
-                    <span class="dias-restantes">10 Dias</span>
-                  </div>
-                  <!-- Opções (Editar, excluir) -->
-                  <div class="tarefas__item__opcoes">
-                    <button class="btn--expansivel btn btn--rendondo btn--redondo-pequeno">
-                      <img class="arrow-icon icone--pequeno" src="./src/icons/flecha-esquerda.svg">
-                    </button>
-                    
-                    <div class="opcoes">
-                      <button class="opcoes__editar btn btn--inline">
-                        <img class="icone--pequeno" src="./src/icons/lapis.svg">
-                      </button>
-                      <button class="opcoes__excluir btn btn--inline">
-                        <img class="icone--pequeno" src="src/icons/lixeira.svg">
-                      </button>
-                    </div>    
-                  </div>
-                </div>
-                <div class="item__descricao">
-                  <p>2h, depois de codar por 13h seguidas até overwork</p>
-                </div>
-              </li>
-
-               <li class="tarefas__item tarefa__item--pendente">
-                
-                <button class="item__btn-descricao btn btn--inline">
-                  <img class="icon icone--pequeno" src="src/icons/descricao.svg">
-                </button>
-
-
-
-                <div class="tarefas__item__conteudo" data-tarefa="1">
-                  <span class="riscado riscado--tarefa-1"></span>
-                  <!-- Checkbox -->
-                  <input type="checkbox" class="cb" id="tarefa-1" name="tarefa--1">
-                  <label class="tarefas__item__checkbox" for="tarefa--1">    
-                    <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
-                        <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
-                        <polyline class="check" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
-                    </svg> 
-                    Limpar
-                  </label>
-                  <div class="tarefas__item__dias-restantes">
-                    <span class="dias-restantes">10 Dias</span>
-                  </div>
-                  <!-- Opções (Editar, excluir) -->
-                  <div class="tarefas__item__opcoes">
-                    <button class="btn--expansivel btn btn--rendondo btn--redondo-pequeno">
-                      <img class="arrow-icon icone--pequeno" src="./src/icons/flecha-esquerda.svg">
-                    </button>
-                    
-                    <div class="opcoes">
-                      <button class="opcoes__editar btn btn--inline">
-                        <img class="icone--pequeno" src="./src/icons/lapis.svg">
-                      </button>
-                      <button class="opcoes__excluir btn btn--inline">
-                        <img class="icone--pequeno" src="src/icons/lixeira.svg">
-                      </button>
-                    </div>    
-                  </div>
-                </div>
-                <div class="item__descricao">
-                  <p>2h, depois de codar por 13h seguidas até overwork</p>
-                </div>
-              </li>
-
-              <li class="tarefas__item tarefa__item--pendente">
-                
-                <button class="item__btn-descricao btn btn--inline">
-                  <img class="icon icone--pequeno" src="src/icons/descricao.svg">
-                </button>
-
-
-
-                <div class="tarefas__item__conteudo" data-tarefa="1">
-                  <span class="riscado riscado--tarefa-1"></span>
-                  <!-- Checkbox -->
-                  <input type="checkbox" class="cb" id="tarefa-1" name="tarefa--1">
-                  <label class="tarefas__item__checkbox" for="tarefa--1">    
-                    <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
-                        <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
-                        <polyline class="check" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
-                    </svg> 
-                    Limpar
-                  </label>
-                  <div class="tarefas__item__dias-restantes">
-                    <span class="dias-restantes">10 Dias</span>
-                  </div>
-                  <!-- Opções (Editar, excluir) -->
-                  <div class="tarefas__item__opcoes">
-                    <button class="btn--expansivel btn btn--rendondo btn--redondo-pequeno">
-                      <img class="arrow-icon icone--pequeno" src="./src/icons/flecha-esquerda.svg">
-                    </button>
-                    
-                    <div class="opcoes">
-                      <button class="opcoes__editar btn btn--inline">
-                        <img class="icone--pequeno" src="./src/icons/lapis.svg">
-                      </button>
-                      <button class="opcoes__excluir btn btn--inline">
-                        <img class="icone--pequeno" src="src/icons/lixeira.svg">
-                      </button>
-                    </div>    
-                  </div>
-                </div>
-                <div class="item__descricao">
-                  <p>2h, depois de codar por 13h seguidas até overwork</p>
-                </div>
-              </li>
-
-               <li class="tarefas__item tarefa__item--pendente">
-                
-                <button class="item__btn-descricao btn btn--inline">
-                  <img class="icon icone--pequeno" src="src/icons/descricao.svg">
-                </button>
-
-
-
-                <div class="tarefas__item__conteudo" data-tarefa="1">
-                  <span class="riscado riscado--tarefa-1"></span>
-                  <!-- Checkbox -->
-                  <input type="checkbox" class="cb" id="tarefa-1" name="tarefa--1">
-                  <label class="tarefas__item__checkbox" for="tarefa--1">    
-                    <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
-                        <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
-                        <polyline class="check" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
-                    </svg> 
-                    Limpar
-                  </label>
-                  <div class="tarefas__item__dias-restantes">
-                    <span class="dias-restantes">10 Dias</span>
-                  </div>
-                  <!-- Opções (Editar, excluir) -->
-                  <div class="tarefas__item__opcoes">
-                    <button class="btn--expansivel btn btn--rendondo btn--redondo-pequeno">
-                      <img class="arrow-icon icone--pequeno" src="./src/icons/flecha-esquerda.svg">
-                    </button>
-                    
-                    <div class="opcoes">
-                      <button class="opcoes__editar btn btn--inline">
-                        <img class="icone--pequeno" src="./src/icons/lapis.svg">
-                      </button>
-                      <button class="opcoes__excluir btn btn--inline">
-                        <img class="icone--pequeno" src="src/icons/lixeira.svg">
-                      </button>
-                    </div>    
-                  </div>
-                </div>
-                <div class="item__descricao">
-                  <p>2h, depois de codar por 13h seguidas até overwork</p>
-                </div>
-              </li>
-
-
             </ul>
+            -->
+            <!-- Cadastro de Tarefas -->
+            <form class="tarefas-form">
+            
+              <ul class="tarefas-form__caminho caminho">
+                <li class="caminho__pagina">Mural de Tarefas</li>
+                <li class="caminho__pagina caminho__pagina--principal">Nova Tarefa</li>
+              </ul>
+              
+              <div class="tarefas-form__campo-titulo campo">
+                <label class="tarefas-form__titulo-lbl" value="O titulo precisa ser objetivo e claro para você..." for="titulo">Titulo:</label>
+                <input class="tarefas-form__titulo_inpt" type="text" name="titulo">
+              </div>
+              <!--PREVIEW TASK 
+              <div class="tarefas-form__preview">    
+                <ul class="">        
+                  <li class="tarefas__item tarefa__item--pendente">
+            
+
+                    <div class="tarefas__item__conteudo" data-tarefa="1">
+                      <span class="riscado riscado--tarefa-1"></span>
+                  
+                      <input type="checkbox" class="cb" id="tarefa-1" name="tarefa--1">
+                      <label class="tarefas__item__checkbox" for="tarefa--1">    
+                        <svg class="custom-checkbox" focusable="false" viewBox="0 0 18.8 15.8" style="enable-background:new 0 0 18.8 15.8;" xml:space="preserve"><style type="text/css">.box{fill:none;stroke:url(#SVGID_1_);stroke-linecap:round;stroke-linejoin:round;}.check{fill:none;stroke:#EEB76B;stroke-linecap:round;stroke-linejoin:round;}</style><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.9182" y1="15.4033" x2="7.9182" y2="0.5668"><stop  offset="0" style="stop-color:#E2703A"/><stop  offset="1" style="stop-color:#9C3D54"/></linearGradient>
+                            <path class="box" d="M11.5,14.9H4.3c-1.8,0-3.3-1.5-3.3-3.3V4.4c0-1.8,1.5-3.3,3.3-3.3h7.2c1.8,0,3.3,1.5,3.3,3.3v7.2C14.8,13.4,13.3,14.9,11.5,14.9z"/>
+                            <polyline class="check" points="3.6,6.6 7.9,10.9 17.8,1.2"/>
+                        </svg> 
+                        Limpar
+                      </label>
+                      <div class="tarefas__item__dias-restantes">
+                        <span class="dias-restantes">10 Dias</span>
+                      </div>
+                    
+                 
+                    </div>
+                    <div class="item__descricao">
+                      <p>2h, depois de codar por 13h seguidas até overwork</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              -->
+              
+              <div class="tarefas-form__campo-titulo campo">
+                <label class="tarefas-form__descricao-lbl" for="descricao">Descricao:</label>
+                <input class="tarefas-form__descricao_inpt" type="text" name="descricao">
+              </div>
+              
+              <div class="tarefas-form__campo-data-limite campo">
+                <label class="tarefas-form__comeca-lbl" for="comeca">Comeca:</label>
+                <input class="tarefas-form__comeca_inpt" type="text" name="comeca">
+                
+                <label class="tarefas-form__termina-lbl" for="termina">Termina:</label>
+                <input class="tarefas-form__termina_inpt" type="text" name="termina">
+              </div>
+            </form>
  
             <button class="tarefas__adicionar-tarefa btn btn--redondo btn--grande">
               <img class="icone icone-plus" src="./src/icons/adicionar.svg">
