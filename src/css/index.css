@@ -482,21 +482,26 @@ input[type=checkbox] {
 }
 
 
-.tarefas-form input {
+.tarefas-form .tarefas-form__campo-titulo  {
+  margin-top: 10px;
+}
+
+.tarefas-form input, textarea {
   border-radius: 10px;
   border: 2px solid #ebeaea ;
   height: 35px;
   width: 100%; 
   color: var(--cinza);
   padding-left: 10px;
+  margin-top: 8px;
 }
 
-.tarefas-form input:focus {
+.tarefas-form input:focus, textarea:focus {
   box-shadow: 0px 0px 15px #EEB76B;
   outline: 2px solid #ffc379;
 }
 
-.tarefas-form input:active {
+.tarefas-form textarea:active, input:active {
   outline: none;
 }
 
@@ -504,7 +509,7 @@ input[type=checkbox] {
   width: 100px;
 }
 
-.tarefas-form label {
+.tarefas-form label, textarea {
   font-size: 1.5rem;
 }
 
@@ -521,7 +526,7 @@ input[type=checkbox] {
 }
 
 .campo {
-  margin: 20px 0px;
+  margin: 5px 0px;
 }
 
 
@@ -548,3 +553,23 @@ input[type=checkbox] {
   color: #E2703A;
 }
 
+.tarefas-form__btn-preview {
+  margin-left: 10px;
+  padding: 3px 10px 3px 10px;
+  background-color: #E2703A;
+  color: var(--light-text);
+  border-radius: 50px;
+  font-size: 1.2rem;
+}
+
+
+.tarefas-form__campo-descricao .tarefas-form__descricao_inpt {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.4rem;
+  height: 70px;  
+  padding-top: 5px;
+}
+
+.preview-icon {
+  width: 15px;
+}
