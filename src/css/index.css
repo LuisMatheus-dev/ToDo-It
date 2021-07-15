@@ -518,6 +518,12 @@ form input, textarea {
   display: block;
   background-color: transparent;
   color: var(--cinza);
+
+}
+
+form input::placeholder, textarea::placeholder {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
 form input:focus, textarea:focus {
@@ -557,8 +563,14 @@ form label {
   margin-right: 20px;
 }
 
-.tarefas-form__campo-descricao {
+.tarefas-form__campo-descricao__inpt {
   resize: none;
+}
+.tarefas-form__descricao-lbl {
+  top: 25px;
+}
+.tarefas-form__descricao-inpt input:focus ~ label {
+  top: -10px;
 }
 
 .tarefas-form input:focus ~ label,
@@ -566,4 +578,11 @@ form label {
   top: -20px;
   font-size: 1.2rem;
   color: var(--text);
+}
+
+
+
+.tarefas-form input:focus::placeholder,
+.tarefas-form textarea:focus::placeholder {
+  opacity: 1;
 }
