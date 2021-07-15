@@ -1,3 +1,5 @@
+
+
 :root {
   /* Layout Base */
   --bg: #EEB76B;
@@ -11,6 +13,7 @@
   --neutro: #729C3D;
   --alerta:  #9C3D3D;
 }
+
 
 
 * {
@@ -476,64 +479,17 @@ input[type=checkbox] {
   transform: translateX(-50%);
 }
 
-.tarefas-form {
-  margin: 8px 15px;
-  padding: 8px;
-}
-
-
-.tarefas-form .tarefas-form__campo-titulo  {
-  margin-top: 10px;
-}
-
-.tarefas-form input, textarea {
-  border-radius: 10px;
-  border: 2px solid #ebeaea ;
-  height: 35px;
-  width: 100%; 
-  color: var(--cinza);
-  padding-left: 10px;
-  margin-top: 8px;
-}
-
-.tarefas-form input:focus, textarea:focus {
-  box-shadow: 0px 0px 15px #EEB76B;
-  outline: 2px solid #ffc379;
-}
-
-.tarefas-form textarea:active, input:active {
-  outline: none;
-}
-
-.tarefas-form  .tarefas-form__comeca_inpt, .tarefas-form .tarefas-form__termina_inpt {
-  width: 100px;
-}
-
-.tarefas-form label, textarea {
-  font-size: 1.5rem;
-}
-
-.tarefas-form__campo-data div:first-child {
-  margin-right: 20px;
-}
-
-.tarefas-form__campo-data {
-  display: flex;
-}
-
-.tarefas-form__campo-data input {
-  display: block;
-}
-
 .campo {
   margin: 5px 0px;
 }
-
 
 .caminho {
   display: flex;
   color:var(--cinza);
   font-weight: 500;
+  position: relative;
+  top: 20px;
+  left: 20px;
 }
 
 .caminho > li {
@@ -553,23 +509,61 @@ input[type=checkbox] {
   color: #E2703A;
 }
 
-.tarefas-form__btn-preview {
-  margin-left: 10px;
-  padding: 3px 10px 3px 10px;
-  background-color: #E2703A;
-  color: var(--light-text);
-  border-radius: 50px;
-  font-size: 1.2rem;
-}
-
-
-.tarefas-form__campo-descricao .tarefas-form__descricao_inpt {
+form input, textarea {
+  border: none;
+  border-bottom: 1.5px solid var(--cinza);
   font-family: 'Archivo', sans-serif;
   font-size: 1.4rem;
-  height: 70px;  
-  padding-top: 5px;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  color: var(--cinza);
 }
 
-.preview-icon {
-  width: 15px;
+form input:focus, textarea:focus {
+  outline: none;
+}
+
+form label {
+  font-size: 1.4rem;
+  color: var(--cinza);
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  transition: all 0.08s ease-in;
+}
+
+.tarefas-form {
+  margin: 20px 15px;
+  padding: 8px;
+  display: block;
+}
+
+.tarefas-form div {
+  margin-top: 20px;
+  position: relative;
+}
+
+.campo {
+  display: block;
+}
+
+.tarefas-form__campo-data {
+  display: flex;
+}
+
+.tarefas-form__campo-data div {
+  width: 110px;
+  margin-right: 20px;
+}
+
+.tarefas-form__campo-descricao {
+  resize: none;
+}
+
+.tarefas-form input:focus ~ label,
+.tarefas input:valid ~ label {
+  top: -20px;
+  font-size: 1.2rem;
+  color: var(--text);
 }
