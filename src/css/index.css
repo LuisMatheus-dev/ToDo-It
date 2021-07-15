@@ -563,14 +563,25 @@ form label {
   margin-right: 20px;
 }
 
+textarea {
+  resize: none;
+}
+
+textarea:focus ~ label {
+  color: var(--text);
+  top: -20px;
+  font-size: 1.2rem;
+
+}
+.tarefas-form  .tarefas-form__campo-descricao {
+  margin-top: 40px;
+}
+
 .tarefas-form__campo-descricao__inpt {
   resize: none;
 }
 .tarefas-form__descricao-lbl {
   top: 25px;
-}
-.tarefas-form__descricao-inpt input:focus ~ label {
-  top: -10px;
 }
 
 .tarefas-form input:focus ~ label,
@@ -579,7 +590,6 @@ form label {
   font-size: 1.2rem;
   color: var(--text);
 }
-
 
 
 .tarefas-form input:focus::placeholder,
