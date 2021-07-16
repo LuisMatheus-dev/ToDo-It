@@ -567,7 +567,8 @@ textarea {
   resize: none;
 }
 
-textarea:focus ~ label {
+textarea:focus ~ label,
+textarea:valid ~ label {
   color: var(--text);
   top: -20px;
   font-size: 1.2rem;
@@ -585,7 +586,7 @@ textarea:focus ~ label {
 }
 
 .tarefas-form input:focus ~ label,
-.tarefas input:valid ~ label {
+.tarefas-form input:valid ~ label  {
   top: -20px;
   font-size: 1.2rem;
   color: var(--text);

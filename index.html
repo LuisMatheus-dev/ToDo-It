@@ -93,7 +93,7 @@
             <form class="tarefas-form">
             
               <div class="tarefas-form__campo-titulo campo">
-                <input class="tarefas-form__titulo_inpt" placeholder="O titulo precisa ser objetivo e claro para você..." type="text" name="titulo">
+                <input class="tarefas-form__titulo_inpt" required  placeholder="O titulo precisa ser objetivo e claro para você..." type="text" name="titulo">
                 <label class="tarefas-form__titulo-lbl"  for="titulo">Titulo:</label>
                 <!-- <button class="tarefas-form__btn-preview btn">Pré-Visualizar Tarefa <img class="preview-icon" src="./src/icons/olho.svg"></button> -->
               </div>
@@ -129,19 +129,19 @@
               -->
               
               <div class="tarefas-form__campo-descricao campo">
-                <textarea class="tarefas-form__descricao__inpt" placeholder="Descreva sua tarefa..." name="descricao"></textarea>
+                <textarea class="tarefas-form__descricao__inpt" required placeholder="Descreva sua tarefa..." name="descricao"></textarea>
                 <label class="tarefas-form__descricao-lbl" for="descricao">Descrição</label>
               </div>
               
               <div class="tarefas-form__campo-data">
                 
                 <div class="tarefas-form__campo-data--inicio campo">
-                  <input class="tarefas-form__comeca_inpt"  placeholder="dd/mm/yyyy" type="text" name="comeca">
+                  <input class="tarefas-form__comeca_inpt"  required placeholder="dd/mm/yyyy" type="text" name="comeca">
                   <label class="tarefas-form__comeca-lbl" for="comeca">Começa</label>
                 </div>
 
                 <div class="tarefas-form__campo-data--fim campo">
-                  <input class="tarefas-form__termina_inpt"  placeholder="dd/mm/yyyy" type="text" name="termina">
+                  <input class="tarefas-form__termina_inpt"  required placeholder="dd/mm/yyyy" type="text" name="termina">
                   <label class="tarefas-form__termina-lbl" for="termina">Termina</label>
                 </div>
 
