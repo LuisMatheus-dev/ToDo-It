@@ -479,6 +479,10 @@ input[type=checkbox] {
   transform: translateX(-50%);
 }
 
+.tarefas__adicionar-tarefa:hover ~ .header {
+  background-color: red;
+}
+
 .campo {
   margin: 5px 0px;
 }
@@ -508,6 +512,7 @@ input[type=checkbox] {
 .caminho__pagina--principal {
   color: #E2703A;
 }
+
 
 form input, textarea {
   border: none;
@@ -592,8 +597,29 @@ textarea:valid ~ label {
   color: var(--text);
 }
 
+.tarefas-form input:focus ~ .line {
+  width: 100%;
+}
+
 
 .tarefas-form input:focus::placeholder,
 .tarefas-form textarea:focus::placeholder {
   opacity: 1;
 }
+
+form input {
+  position: relative;
+}
+
+.line {
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--destaque);
+  display: block;
+  position: absolute;
+  transition: width 0.2s ease-in;
+  left: 50%;
+  transform: translate(-50%);
+}
+
