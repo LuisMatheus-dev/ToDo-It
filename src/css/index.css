@@ -590,15 +590,17 @@ textarea:valid ~ label {
   top: 25px;
 }
 
-.tarefas-form input:focus ~ label,
-.tarefas-form input:valid ~ label  {
+.tarefas-form input:focus ~ label, 
+.tarefas-form input:valid ~ label {
   top: -20px;
   font-size: 1.2rem;
   color: var(--text);
 }
 
-.tarefas-form input:focus ~ .line {
+.tarefas-form input:focus ~ .line,
+.tarefas-form textarea:focus ~ .line {
   width: 100%;
+  opacity: 1;
 }
 
 
@@ -618,8 +620,9 @@ form input {
   background-color: var(--destaque);
   display: block;
   position: absolute;
-  transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in, opacity 0.2s ease-in;
   left: 50%;
   transform: translate(-50%);
+  opacity: 0;
 }
 
